@@ -1,0 +1,28 @@
+{
+  "name": "sassy-static-sites",
+  "version": "0.1.0",
+  "description": "A template for static sites built with eleventy and sass for styling",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:css:watch & npm run build:site:watch",
+    "build": "npm run build:css && npm run build:site",
+    "build:site": "eleventy --config=.eleventy.js",
+    "build:site:watch": "eleventy --serve --watch --config=.eleventy.js",
+    "build:css": "sass app/scss:dist --style=compressed",
+    "build:css:watch": "sass --style=compressed --watch app/scss:dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ollo/sassy-static-sites"
+  },
+  "author": "engineering@singularity-interactive.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Ollo/sassy-static-sites/issues"
+  },
+  "homepage": "https://github.com/Ollo/sassy-static-sites#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "sass": "^1.32.6"
+  }
+}
